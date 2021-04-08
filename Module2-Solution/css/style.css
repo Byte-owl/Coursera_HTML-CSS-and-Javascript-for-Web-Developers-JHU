@@ -1,0 +1,134 @@
+/*CSS Stylesheet for Module 2 Assignment*/
+
+/*Base styling*/
+
+* {
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
+
+
+body {
+    /* (OPTIONAL) Explicitly setting a font-family */
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    /*In case if the background image fails to load.*/
+    background-color: rgb(68, 68, 68);
+    /*background image stored inside "css/images/" */
+    background-image: url(images/background-img.jpg);
+    background-position: center;
+    background-repeat: repeat;
+    font-size: 1.25em;
+}
+
+
+/*Heading*/
+.Heading_banner {
+    background-color: black;
+    align-content: center;
+    text-align: center;
+    margin: auto;
+    padding: 3.5%;
+}
+
+.Heading_text {
+    /*base style in case 'font-family: "Chonburi"' doesn't load properly*/
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    /*using google api*/
+    font-family: 'Chonburi';
+    color: white;
+    /* (OPTIONAL) Size of Heading: 75% larger than dummy text */
+    font-size: 1.75em;
+    letter-spacing: 2px;
+}
+
+
+/*Main section*/
+.Container {
+    margin: 3% 1% 3% 1%;
+    overflow: auto;
+}
+
+.Container .row-base {
+    margin: auto;
+    padding: 1%;
+}
+
+.Container .section_partition {
+    border: 1px solid black;
+    border-radius: 3%;
+    background-color: rgb(240, 201, 29);
+    width: 100%;
+    overflow: auto;
+}
+
+.Container .section_partition .Section_heading {
+    margin-left: 60%;
+    width: 40%;
+    padding: 1% 2% 1% 2%;
+    align-content: center;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 7.5%;
+    font-family: 'Trykker';
+    /* (OPTIONAL) section title: 25% larger than dummy text */
+    font-size: 1.25em;
+}
+
+.Container .section_partition .Sec_head_1 {
+    background-color: violet;
+}
+
+.Container .section_partition .Sec_head_2 {
+    background-color: darkviolet;
+}
+
+.Container .section_partition .Sec_head_3 {
+    background-color: darkmagenta;
+}
+
+.Container .section_partition .Section_content {
+    margin: 1.5%;
+    padding: 1.5%;
+    font-size: 1em;
+}
+
+
+
+/*Responsive design*/
+
+/*Desktop version of the site*/
+@media (min-width: 992px) {
+    .Container .col-lg-4 {
+        width: 33.33%;
+        float: left;
+    }
+}
+
+
+/*Tablet version of the site*/
+@media (min-width: 768px) and (max-width: 991px) {
+    .Container .col-md-6 {
+        width: 50%;
+        float: left;
+    }
+    .Container .col-md-12 {
+        width: 100%;
+        float: left;
+    }
+    /*Tweaking the size of the section heading for the 3rd column*/
+    .Container .col-md-12 .section_partition .Sec_head_3 {
+        margin-left: 80%;
+        width: 20%;
+    }
+}
+
+/*Mobile version of the site*/
+/* having width<=767px */
+@media (max-width: 767px) {
+    .Container .col-sm-12 {
+        width: 100%;
+        float: left;
+    }
+}
+
