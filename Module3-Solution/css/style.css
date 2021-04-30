@@ -2,7 +2,6 @@
 body {
     /*In case if the background image fails to load.*/
     background-color: rgb(58, 58, 58);
-    /*background image stored inside "css/images/" */
     background-image: url(../images/background-img.jpg);
     background-position: center;
     background-repeat: repeat;
